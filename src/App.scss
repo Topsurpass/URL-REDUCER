@@ -1,0 +1,474 @@
+body{
+  background-color: rgb(247, 243, 247);
+  overflow-x: hidden;
+  font-family: 'Times New Roman', Times, serif;
+}
+@mixin flex-space{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-center{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center
+}
+.App-header{
+  @include flex-space();
+  height:100px;
+}
+.webLogo{
+  padding-left: 7%;
+}
+.lagMenu{
+  display: none;
+}
+.menu{
+  font-size: 2.3em;
+  padding-right: 7%;
+  color:grey;
+}
+.menuList{
+  background-color: rgb(70, 52, 70);
+  display: grid;
+  width:90%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 10px;
+  justify-content: center;
+  display: none;
+  color: white;
+  border-radius: 10px;
+  animation-name: slideIn;
+  animation-duration: 1s;
+  .menu3{
+    div{
+      height: 50px;
+      font-size: 1.2em;
+      @include flex-center();
+    }
+  }
+  .loginSignUp{
+    div{
+      height: 50px;
+      font-size: 1.2em;
+      @include flex-center();
+    }
+  }
+  div{
+    
+    button{
+      width:90%;
+      height:40px;
+      font-size: 1em;
+      border-radius: 25px;
+      border: 0px;
+      color: white;
+      background-color: rgb(55, 194, 182);
+      margin-bottom: 10px;
+    }
+  }
+}
+@keyframes slideIn {
+  0%{
+    width:40%;
+  }
+  100%{
+    width:90%;
+  }
+}
+.textPics{
+  @include flex-center()
+}
+
+.deskWorker{
+  display: none;
+}
+.intro{
+  @include flex-center();
+  h1{
+    font-size: 3em;
+    width:90%;
+    color: rgb(71, 64, 64);
+  }
+  p{
+    font-size: 1.3em;
+    color: grey;
+    width:90%;
+    margin-top: 0px;
+    margin-bottom: 10%;
+    line-height: 1.5;
+  }
+  button{
+    width:60%;
+    height:60px;
+    border-radius: 30px;
+    background-color: rgb(72, 192, 182);
+    border: 0px solid;
+    color:white;
+    font-size: 1.6em;
+    font-family: 'Times New Roman', Times, serif;
+  }
+}
+#header-img{
+  width:100%;
+  display: block;
+}
+.firstSec{
+  @include flex-center();
+
+  .shortDiv{
+    width:90%; 
+    margin-top: 10%;
+    height:auto;
+    border-radius: 10px;
+    background-color:rgb(72, 192, 182);
+      .searchDIV,.subUrl{
+        margin:3% 0%;
+      }
+      
+      div{
+        height:60px;
+        //width:100%;
+        
+        #search{
+          height: 50%;
+          width:85%; 
+          border-radius: 8px;
+          outline: none;  
+          border: 0px;
+          padding:10px;
+          font-size: 1.2em;
+        }
+        #submitUrl{
+          height:85%;
+          width:90%;
+          color:white;
+          background-color: rgb(70, 52, 70);
+          border-radius: 8px;
+          border: 0px;
+          font-size: 1.5em;
+          font-family: 'Times New Roman', Times, serif;
+        }
+        #submitUrl:active{
+          background-color: rgb(51, 27, 51);
+        }
+    }
+  }
+}
+.advance{
+  margin-top: 15%;
+  margin-bottom: 10%;
+  h2{
+    font-size: 2em;
+  }
+  p{
+    font-size: 1.1em;
+    color: grey;
+    line-height: 1.5;
+  }
+
+}
+.brand1,.brand2,.brand3{
+  background-color: white;
+  min-height: 200px;
+  width:80%;
+  margin-top: 7%;
+  margin-bottom: 15%;
+  border-radius: 7px;
+  // animation: movement;
+  // animation-duration: 4s;
+  // animation-iteration-count: infinite;
+  @include flex-center();
+  h3{
+    font-size: 1.5em;
+  }
+  p{
+    font-size: 1.1em;
+    color: grey;
+    line-height: 1.5;
+    padding:0px 10px;
+    text-align: justify;
+  }
+  .roundImg{
+    background-color:  rgb(70, 52, 70);
+    width:30%;
+    height:80px;
+    border-radius: 50%;
+    @include flex-center();
+    margin-top:-35px;
+  }
+}
+
+.boostLinks{
+  background-color:  rgb(105, 69, 105);
+  width:100%;
+  height:300px;
+  @include flex-center();
+  color: white;
+    button{
+      color:rgb(105, 69, 105);
+      background-color: aqua;
+      width:80%;
+      height:40px;
+      border: 2px solid rgb(105, 69, 105);
+      border-radius: 20px;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1.2em;
+    }
+}
+.foot{
+  @include flex-center();
+  padding-top: 10%;
+  background-color: rgb(70, 52, 70);
+  margin-top: -1px;
+  h3,h2{
+    color: white;
+  }
+  p{
+    color:rgb(185, 174, 174);
+    font-size: 1.1em;
+  }
+  h3{
+    font-size: 1.3em;
+  }
+  h2{
+    font-size: 1.8em;
+  }
+  .socials{
+    font-size: 1.4em;
+    color:white;
+    width:60%;
+    display:flex;
+    justify-content: space-around;
+    margin-bottom: 10%;
+  }
+}
+.advanceSection{
+  @include flex-center();
+}
+.advanceDiv{
+  width:100%;
+  @include flex-center();
+}
+.display{
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 5px;
+  width:90%;
+  margin-top: 3%;
+  word-wrap: break-word;
+}
+.shortlink{
+  background-color: white;
+  min-height:50px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 1.2em;
+  width: 100%;
+  word-break: break-all;
+  text-align: center;
+}
+.copyBut{
+  
+    button{
+      width:100%;
+      background-color: rgb(40, 109, 109);
+      height:50px;
+      border: 0px;
+      border-radius: 15px;
+      font-size: 1.2em;
+      color:white;
+    }
+    button:active{
+      background-color: rgb(27, 182, 182);
+    }
+}
+.loginSignUp{
+  .signup{
+    button{
+      width:100%;
+      border-radius: 30px;
+      background-color:rgb(72, 192, 182);
+      border: 0px;
+    }
+  }
+}
+.searchDIV{
+  p{
+    margin-top: 0px;
+    margin-left: 7%;
+    text-align: left;
+    color:red;
+  }
+}
+.link2{
+  color:white;
+  text-decoration: none;
+  width:50%;
+}
+.linkErrors{
+  @include flex-center();
+  height:100vh;
+  h1{
+    font-size: 5em;
+    color:Red;
+    margin: 0px;
+  }
+  p{
+   margin:0px;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+ }
+@media only screen and (min-width:769px) {
+  .deskWorker{
+    display: block;
+  }
+  .work{
+    display: none;
+  }
+  .textPics{
+    flex-direction: row-reverse;
+    width:100%;
+    margin:0;
+    .intro{
+      width:50%;
+      text-align: left;
+    }
+    .intro{
+      padding-left:6%;
+      align-items: flex-start;
+      button{
+        width:45%;
+      }
+      h1{
+        font-size: 4em;
+      }
+    }
+  }
+  #header-img{
+    width:50%;
+  }
+  .shortDiv{
+    display:flex;
+    flex-direction: row;
+  }
+  .searchDIV{
+    width:80%;
+  }
+  .subUrl{
+    width:25%;
+  }
+  .advance{
+    margin: 5% 0%;
+  }
+  .advanceDiv{
+    flex-direction: row;
+  }
+  .brand1,.brand2,.brand3{
+   width:300px;
+   min-height: 300px; 
+  }
+
+  #firstBrand,#secondBrand{
+    margin-right: 2%;
+  }
+  #firstBrand{
+    margin-top: 0%;
+  }
+  #thirdBrand{
+    margin-top: 15%;
+  }
+  .boostLinks{
+    h3{
+      font-size: 2em;
+    }
+  }
+ .foot{
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  padding-top: 0;
+ }
+  .subClass{
+    display: flex;
+    justify-content: space-evenly;
+    width:100%;
+  }
+  .menuList,.menu{
+    display: none;
+  }
+  .App-header{
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+    justify-content: center;
+  }
+  .lagMenu{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 8%;
+    .menu3{
+      display: flex;
+      font-size: 1.2em;
+      div{
+        margin-left: 10px;
+        cursor: pointer;
+      }
+    }
+    .loginSignUp{
+      display: flex;
+      align-items: center;
+      font-size: 1.2em;
+      margin-right: 8%;
+      div{
+        margin-right: 10px;
+      }
+    }
+  }
+  .webLogo{
+    margin-left: 25%;
+  }
+  .loginSignUp{
+    .signup{
+      button{
+        width:150px;
+        height:50px;
+        font-size:15px;
+      }
+    }
+  }
+ .linkErrors{
+  h1{
+    font-size: 7em;
+  }
+ }
+ .link{
+  color:rgb(71, 64, 64);
+  text-decoration: none;
+  div{
+    border:2px solid rgb(70, 52, 70);
+    background-color: rgb(70, 52, 70);
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    padding:5px 10px;
+  }
+  div:hover{
+    color:rgb(27, 182, 182);
+    transform: scale(1.2);
+  }
+ }
+ .linkBut{
+  button{
+    color:white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  button:hover{
+    transform: scale(1.1);
+  }
+  
+ }
+}
