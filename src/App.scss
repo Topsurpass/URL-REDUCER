@@ -323,6 +323,21 @@ body{
    font-family: Georgia, 'Times New Roman', Times, serif;
   }
  }
+ .slider,.left{
+  opacity:0;
+  transition:all 1s;
+  transform: translateX(-100%);
+ }
+ .right{
+  opacity:1;
+  transition:all 1s;
+  transform: translateX(100%);
+ }
+ .show{
+  opacity: 1;
+  transform: translateX(0%);
+ }
+ 
 @media only screen and (min-width:769px) {
   .deskWorker{
     display: block;
@@ -367,6 +382,13 @@ body{
   }
   .advanceDiv{
     flex-direction: row;
+    display: flex;
+  }
+  .advanceDiv:nth-child(2){
+    transition-delay: 800ms;
+  }
+  .advanceDiv:nth-child(3){
+    transition-delay: 1200ms;
   }
   .brand1,.brand2,.brand3{
    width:300px;
@@ -462,13 +484,12 @@ body{
   }
  }
  .linkBut{
-  button{
-    color:white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-  }
-  button:hover{
-    transform: scale(1.1);
-  }
-  
+    button{
+      color:white;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    button:hover{
+      transform: scale(1.1);
+    }
  }
 }

@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom';
 
 export const MainComponent = () => {
     const [menu, setmenu] = useState(true);
-    const [link, setLink] = useState('')
+    const [link, setLink] = useState('');
 
   useEffect(() => {
     let output=''
@@ -116,11 +116,11 @@ export const MainComponent = () => {
 
             <div className='textPics'>
                 <Menu/>
-                <div id='header-img' >
+                <div id='header-img' className='right'>
                     <img src={worker} width='100%' alt='worker' className='work'/>
                     <img src={deskWorker} width='100%' alt='worker' className='deskWorker'/>
                 </div>           
-                <div className='intro'>
+                <div className='intro left'>
                     <h1>More than just shorter links</h1>
                     <p>Build your brand's recognition and get detailed insights on how your links are performing.</p>
                     <button className='getStarted'>Get started</button>
@@ -151,7 +151,7 @@ export const MainComponent = () => {
             <div className='advanceDiv'>
 
             <AdvanceStatictic 
-                class='brand1'
+                class='brand1 slider'
                 img={brand}
                 title='Brand Recognition'
                 paragraph={`Boost your brand recognition with
@@ -162,7 +162,7 @@ export const MainComponent = () => {
             />
 
             <AdvanceStatictic
-                class='brand2' 
+                class='brand2 slider' 
                 img={record}
                 title='Detailed Records'
                 paragraph={`Gain insights into who is 
@@ -173,7 +173,7 @@ export const MainComponent = () => {
             />
 
             <AdvanceStatictic 
-                class='brand3'
+                class='brand3 slider'
                 img={custom}
                 title='Fully Customizable'
                 paragraph={`Improve brand awareness and 
