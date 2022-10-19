@@ -324,18 +324,19 @@ body{
   }
  }
  .slider,.left{
-  opacity:0;
+  opacity:1;
   transition:all 1s;
-  transform: translateY(-30%);
+  transform: translateX(-30%);
+ 
  }
  .right{
-  opacity:0;
+  opacity:1;
   transition:all 1s;
-  transform: translateY(-30%);
+  transform: translateX(-30%);
  }
  .show{
   opacity: 1;
-  transform: translateY(0%);
+  transform: translateX(0%);
  }
 
  
@@ -385,17 +386,6 @@ body{
     flex-direction: row;
     display: flex;
   }
-  .advanceDiv:nth-child(2){
-    transition-delay: 800ms;
-  }
-  .advanceDiv:nth-child(3){
-    transition-delay: 1200ms;
-  }
-  .brand1,.brand2,.brand3{
-   width:300px;
-   min-height: 300px; 
-  }
-
   #firstBrand,#secondBrand{
     margin-right: 2%;
   }

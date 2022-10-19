@@ -71,7 +71,7 @@ export const MainComponent = () => {
         return e.target.value;
     })
   }
-  
+
   return (
     <div className="App">
 
@@ -84,23 +84,23 @@ export const MainComponent = () => {
            
            <div className='lagMenu'>
                 <nav className='menu3'>
-                    <Link className='link' to='/Features'  target='_blank'>
+                    <Link className='link' to='/' >
                         <div>Features</div>
                     </Link>
-                    <Link to='/Pricing' className='link'  target='_blank'>
+                    <Link to='/' className='link' >
                         <div>Pricing</div>
                     </Link>
-                    <Link to='/Resources' className='link'  target='_blank'>
+                    <Link to='/' className='link' >
                         <div>Resources</div>
                     </Link>
                 </nav>           
                 <div className='loginSignUp'>
-                    <Link to='/Login' className='link'  target='_blank'>
+                    <Link to='/' className='link' >
                         <div>Login</div>
                     </Link>
                     
                     <div  className='signup'>
-                        <Link to='/Sign_Up' className='linkBut'  target='_blank'>
+                        <Link to='/' className='linkBut' >
                             <button>Sign Up</button>
                         </Link>
                     </div>

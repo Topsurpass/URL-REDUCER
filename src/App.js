@@ -6,24 +6,26 @@ import {useEffect} from 'react';
 function App() {
 
   useEffect(()=>{
+    const annimateOnScroll=(getClass,newClass)=>{
+      const classSelector=document.querySelectorAll(`.${getClass}`);
+      const observer = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+          if(entry.isIntersecting){
+            entry.target.classList.add(`${newClass}`);
+          }
+          else{
+            entry.target.classList.remove(`${newClass}`);
+          }
+        });
+      });
+      classSelector.forEach((elements)=>observer.observe(elements))
+    }  
     annimateOnScroll('slider','show');
     annimateOnScroll('left','show');
     annimateOnScroll('right','show');
   });
 
-  const annimateOnScroll=(getClass,newClass)=>{
-    const classSelector=document.querySelectorAll(`.${getClass}`);
-    const observer = new IntersectionObserver((entries)=>{
-      entries.forEach((entry)=>{
-        if(entry.isIntersecting){
-          entry.target.classList.add(`${newClass}`);
-        }else{
-          entry.target.classList.remove(`${newClass}`);
-        }
-      });
-    });
-    classSelector.forEach((elements)=>observer.observe(elements))
-  }  
+  
 
   return (
     <Router>
