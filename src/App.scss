@@ -326,17 +326,18 @@ body{
  .slider,.left{
   opacity:0;
   transition:all 1s;
-  transform: translateY(-50%);
+  transform: translateY(-30%);
  }
  .right{
-  opacity:1;
+  opacity:0;
   transition:all 1s;
-  transform: translateY(50%);
+  transform: translateY(-30%);
  }
  .show{
   opacity: 1;
   transform: translateY(0%);
  }
+
  
 @media only screen and (min-width:769px) {
   .deskWorker{
@@ -496,7 +497,7 @@ body{
   transform: translateX(-100%);
  }
  .right{
-  transform: translateX(100%);
+  transform: translateX(-100%);
  }
  .show{
   transform: translateX(0%);

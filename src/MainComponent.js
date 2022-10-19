@@ -84,23 +84,23 @@ export const MainComponent = () => {
            
            <div className='lagMenu'>
                 <nav className='menu3'>
-                    <Link className='link' to='/Features'>
+                    <Link className='link' to='/Features'  target='_blank'>
                         <div>Features</div>
                     </Link>
-                    <Link to='/Pricing' className='link'>
+                    <Link to='/Pricing' className='link'  target='_blank'>
                         <div>Pricing</div>
                     </Link>
-                    <Link to='/Resources' className='link'>
+                    <Link to='/Resources' className='link'  target='_blank'>
                         <div>Resources</div>
                     </Link>
                 </nav>           
                 <div className='loginSignUp'>
-                    <Link to='/Login' className='link'>
+                    <Link to='/Login' className='link'  target='_blank'>
                         <div>Login</div>
                     </Link>
                     
                     <div  className='signup'>
-                        <Link to='/Sign_Up' className='linkBut'>
+                        <Link to='/Sign_Up' className='linkBut'  target='_blank'>
                             <button>Sign Up</button>
                         </Link>
                     </div>
